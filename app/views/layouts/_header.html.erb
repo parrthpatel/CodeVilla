@@ -107,9 +107,8 @@
 
 
                 <li>
-                    <a href="login.html">
-                        <i class="fa fa-sign-out"></i> Log out
-                    </a>
+                    
+                        <i class="fa fa-sign-out"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></i>
                 </li>
             </ul>
             
