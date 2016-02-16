@@ -13,7 +13,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'noreplay@codevilla.com'
-  config.omniauth :github, '44b14618c1e49868243c', 'e6f5c94c1248fbd23027b91b8d9d67e9f5cc4083', :scope => 'user:email'
+  config.omniauth :github, Rails.application.secrets.omniauth_provider_key, Rails.application.secrets.omniauth_provider_secret, scope:'user,repo'
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 

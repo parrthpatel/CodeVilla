@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160211070714) do
+ActiveRecord::Schema.define(version: 20160216092530) do
+
+  create_table "github_profiles", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "nickname"
+    t.string   "email"
+    t.string   "name"
+    t.string   "image"
+    t.string   "location"
+    t.integer  "public_repo"
+    t.integer  "public_gists"
+    t.integer  "followers"
+    t.integer  "following"
+    t.string   "member_since"
+    t.integer  "private_repos"
+    t.string   "github_link"
+    t.string   "blog_link"
+    t.text     "bio"
+    t.string   "access_token"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

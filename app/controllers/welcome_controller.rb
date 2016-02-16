@@ -1,7 +1,9 @@
 class WelcomeController < ApplicationController
   before_action :authenticate_user!
   def index
-    render layout: "authen"
+#     client = Octokit::Client.new(:access_token => current_user.github_profile.access_token)
+ #    @repositories = client.repos
+     render layout: "authen"
   end
 
   def table
